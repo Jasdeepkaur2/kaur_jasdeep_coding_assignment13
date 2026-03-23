@@ -1,7 +1,11 @@
-// src/components/TableHeader/TableHeader.jsx
 import React from "react";
+import "./TableHeader.css";
 
-function TableHeader({ children }) {
+interface TableHeaderProps {
+  children: React.ReactNode;
+}
+
+function TableHeader({ children }: TableHeaderProps) {
   return <thead>{children}</thead>;
 }
 

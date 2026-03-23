@@ -1,8 +1,11 @@
-// src/components/Table/Table.jsx
 import React from "react";
 import "./Table.css";
 
-function Table({ children }) {
+interface TableProps {
+  children: React.ReactNode;
+}
+
+function Table({ children }: TableProps) {
   return <table className="table">{children}</table>;
 }
 

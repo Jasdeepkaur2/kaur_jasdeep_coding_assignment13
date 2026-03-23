@@ -28,8 +28,12 @@ function App() {
 
       <section>
         <h2>Buttons</h2>
-        <Button label="Primary" onClick={() => alert("Clicked!")} />
-        <Button label="Disabled" disabled={true} />
+        <Button
+          label="Primary"
+          onClick={() => alert("Clicked!")}
+          disabled={false}
+        />
+        <Button label="Disabled" onClick={() => {}} disabled={true} />
       </section>
 
       <section>
@@ -59,7 +63,9 @@ function App() {
         <h2>Dropdown</h2>
         <Dropdown
           options={["Option 1", "Option 2", "Option 3"]}
-          onChange={(e) => console.log(e.target.value)}
+          onChange={(e: React.ChangeEvent<HTMLSelectElement>) =>
+            console.log(e.target.value)
+          }
         />
       </section>
 
@@ -82,12 +88,21 @@ function App() {
       <section>
         <h2>Table</h2>
         <Table>
-          <TableHeader>Name</TableHeader>
+          <TableHeader>
+            <tr>
+              <th>Name</th>
+              <th>Role</th>
+            </tr>
+          </TableHeader>
           <TableRow>
             <TableCell>Jasdeep Kaur</TableCell>
             <TableCell>Developer</TableCell>
           </TableRow>
-          <TableFooter>End of Table</TableFooter>
+          <TableFooter>
+            <tr>
+              <td colSpan={2}>End of Table</td>
+            </tr>
+          </TableFooter>
         </Table>
       </section>
     </div>

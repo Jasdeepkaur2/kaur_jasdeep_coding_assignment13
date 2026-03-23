@@ -1,7 +1,11 @@
-// src/components/TableFooter/TableFooter.jsx
 import React from "react";
+import "./TableFooter.css";
 
-function TableFooter({ children }) {
+interface TableFooterProps {
+  children: React.ReactNode;
+}
+
+function TableFooter({ children }: TableFooterProps) {
   return <tfoot>{children}</tfoot>;
 }
 

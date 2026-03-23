@@ -1,8 +1,11 @@
-// src/components/Label/Label.jsx
 import React from "react";
 import "./Label.css";
 
-function Label({ text }) {
+interface LabelProps {
+  text: string;
+}
+
+function Label({ text }: LabelProps) {
   return <span className="label">{text}</span>;
 }
 

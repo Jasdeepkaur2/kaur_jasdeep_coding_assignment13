@@ -1,13 +1,17 @@
-// src/components/Dropdown/Dropdown.jsx
 import React from "react";
 import "./Dropdown.css";
 
-function Dropdown({ options, onChange }) {
+interface DropdownProps {
+  options: string[];
+  onChange: (e: React.ChangeEvent<HTMLSelectElement>) => void;
+}
+
+function Dropdown({ options, onChange }: DropdownProps) {
   return (
     <select className="dropdown" onChange={onChange}>
-      {options.map((opt, i) => (
-        <option key={i} value={opt}>
-          {opt}
+      {options.map((option) => (
+        <option key={option} value={option}>
+          {option}
         </option>
       ))}
     </select>

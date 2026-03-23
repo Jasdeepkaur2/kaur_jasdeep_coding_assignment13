@@ -1,8 +1,12 @@
-// src/components/Card/Card.jsx
 import React from "react";
 import "./Card.css";
 
-function Card({ title, description }) {
+interface CardProps {
+  title: string;
+  description: string;
+}
+
+function Card({ title, description }: CardProps) {
   return (
     <div className="card">
       <h2>{title}</h2>

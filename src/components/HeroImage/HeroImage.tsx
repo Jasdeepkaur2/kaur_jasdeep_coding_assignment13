@@ -1,8 +1,12 @@
-// src/components/HeroImage/HeroImage.jsx
 import React from "react";
 import "./HeroImage.css";
 
-function HeroImage({ src, alt }) {
+interface HeroImageProps {
+  src: string;
+  alt: string;
+}
+
+function HeroImage({ src, alt }: HeroImageProps) {
   return (
     <div className="hero-container">
       <img src={src} alt={alt} className="hero-img" />

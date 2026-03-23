@@ -1,7 +1,14 @@
-// src/components/RadioButton/RadioButton.jsx
 import React from "react";
+import "./RadioButton.css";
 
-function RadioButton({ label, name, checked, onChange }) {
+interface RadioButtonProps {
+  label: string;
+  name: string;
+  checked: boolean;
+  onChange: () => void;
+}
+
+function RadioButton({ label, name, checked, onChange }: RadioButtonProps) {
   return (
     <label>
       <input type="radio" name={name} checked={checked} onChange={onChange} />{" "}

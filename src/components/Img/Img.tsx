@@ -1,7 +1,12 @@
-// src/components/Img/Img.jsx
 import React from "react";
 
-function Img({ src, alt, width }) {
+interface ImgProps {
+  src: string;
+  alt: string;
+  width?: string;
+}
+
+function Img({ src, alt, width }: ImgProps) {
   return <img src={src} alt={alt} width={width} />;
 }
 

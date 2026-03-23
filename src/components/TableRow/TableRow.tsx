@@ -1,7 +1,11 @@
-// src/components/TableRow/TableRow.jsx
 import React from "react";
+import "./TableRow.css";
 
-function TableRow({ children }) {
+interface TableRowProps {
+  children: React.ReactNode;
+}
+
+function TableRow({ children }: TableRowProps) {
   return <tr>{children}</tr>;
 }
 

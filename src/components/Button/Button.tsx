@@ -1,8 +1,13 @@
-// src/components/Button/Button.jsx
 import React from "react";
 import "./Button.css";
 
-function Button({ label, onClick, disabled }) {
+interface ButtonProps {
+  label: string;
+  onClick: () => void;
+  disabled?: boolean;
+}
+
+function Button({ label, onClick, disabled }: ButtonProps) {
   return (
     <button className="button" onClick={onClick} disabled={disabled}>
       {label}

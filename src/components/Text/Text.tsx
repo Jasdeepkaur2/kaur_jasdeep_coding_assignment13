@@ -1,8 +1,11 @@
-// src/components/Text/Text.jsx
 import React from "react";
 import "./Text.css";
 
-function Text({ content }) {
+interface TextProps {
+  content: string;
+}
+
+function Text({ content }: TextProps) {
   return <p className="text">{content}</p>;
 }
 
