@@ -18,7 +18,11 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "prepare": "husky",
+    "lint": "eslint src/**/*.{js,jsx,ts,tsx} --max-warnings=0",
+    "format": "prettier --write src/**/*.{js,jsx,ts,tsx,css}",
+    "format:check": "prettier --check src/**/*.{js,jsx,ts,tsx,css}"
   },
   "eslintConfig": {
     "extends": [
@@ -40,14 +44,33 @@
     ]
   },
   "devDependencies": {
-    "storybook": "^10.2.13",
-    "@storybook/react-webpack5": "^10.2.13",
-    "@storybook/preset-create-react-app": "^10.2.13",
     "@storybook/addon-a11y": "^10.2.13",
     "@storybook/addon-docs": "^10.2.13",
     "@storybook/addon-onboarding": "^10.2.13",
-    "webpack": "^5.105.3",
+    "@storybook/preset-create-react-app": "^10.2.13",
+    "@storybook/react-webpack5": "^10.2.13",
+    "@types/node": "^25.5.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@typescript-eslint/eslint-plugin": "^5.62.0",
+    "@typescript-eslint/parser": "^5.62.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.5",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-storybook": "^10.2.13",
     "prop-types": "^15.8.1",
-    "eslint-plugin-storybook": "^10.2.13"
+    "storybook": "^10.2.13",
+    "typescript": "^5.9.3",
+    "webpack": "^5.105.3"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "prettier --write",
+      "eslint --max-warnings=0"
+    ],
+    "src/**/*.{css,json,md}": [
+      "prettier --write"
+    ]
   }
 }

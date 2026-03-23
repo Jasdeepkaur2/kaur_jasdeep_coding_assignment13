@@ -1,0 +1,10 @@
+echo "Running Prettier check..."
+npx prettier --check "src/**/*.{js,jsx,ts,tsx,css}" || { echo "Prettier check failed. Run: npx prettier --write src/"; exit 1; }
+
+echo "Running ESLint check..."
+npx eslint "src/**/*.{js,jsx,ts,tsx}" --max-warnings=0 || { echo "ESLint check failed."; exit 1; }
+
+echo "Running Tests..."
+CI=true npm test -- --watchAll=false || { echo "Tests failed."; exit 1; }
+
+echo "All checks passed!"

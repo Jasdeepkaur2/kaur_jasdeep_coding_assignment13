@@ -7,5 +7,9 @@ export default {
 };
 
 export const Default = {
-  args: { src: "https://via.placeholder.com/150", alt: "Placeholder", width: "150" },
+  args: {
+    src: "https://via.placeholder.com/150",
+    alt: "Placeholder",
+    width: "150",
+  },
 };
