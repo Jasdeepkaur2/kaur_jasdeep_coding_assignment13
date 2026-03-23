@@ -49,6 +49,7 @@
     "@storybook/addon-onboarding": "^10.2.13",
     "@storybook/preset-create-react-app": "^10.2.13",
     "@storybook/react-webpack5": "^10.2.13",
+    "@types/jest": "^30.0.0",
     "@types/node": "^25.5.0",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
